@@ -1,8 +1,10 @@
 """Module to create Cards and Decks for Blackjack game"""
 import random
 from collections import namedtuple
+
 Card = namedtuple('Card', ['rank', 'suit'])
-class FrenchDeck:
+
+class FrenchDeck(Card):
     """Class to create cards and create decks"""
     card_suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades']
     card_rank = ['Ace'] + [str(num) for num in range (2, 11)] + ['Jack', 'Queen', 'King']
